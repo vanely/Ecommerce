@@ -1,8 +1,17 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 import HomePage from '../../components/HomePage/HomePage.component';
 
 import './App.scss';
+
+const HatsPage = () => {
+    return(
+        <div>
+            <h1>Hats Page</h1>
+        </div>
+    );
+}
 
 export default class App extends React.Component {
     constructor(props) {
@@ -13,7 +22,12 @@ export default class App extends React.Component {
     render() {
         return (
         <div className="App">
-            <HomePage/>
+            <Route exact path='/'>
+                <HomePage/>
+                <HatsPage/>
+            </Route>
+            {/*<Route exact path='/hats' component={ HatsPage }/>*/}
+            {/*<HomePage/>*/}
         </div>
       );
     }

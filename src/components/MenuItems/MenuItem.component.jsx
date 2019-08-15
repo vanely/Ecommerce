@@ -12,6 +12,6 @@ const MenuItem = (props) => {
             </div>
         </div>
     );
-}
+};
 
 export default MenuItem;
