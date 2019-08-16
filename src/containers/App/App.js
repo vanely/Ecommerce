@@ -1,7 +1,8 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import HomePage from '../../components/HomePage/HomePage.component';
+import HomePage from '../../Pages/HomePage/HomePage.component';
+import Shop from '../../Pages/Shop/Shop.component';
 
 import './App.scss';
 
@@ -10,6 +11,7 @@ const HatsPage = (props) => {
         <div>
             <h1>Hats Page</h1>
             <button onClick={() => {props.history.push('/')}}>Home Page</button>
+            <button onClick={() => {props.history.push('/shop')}}>Shop</button>
         </div>
     );
 };
@@ -24,8 +26,10 @@ export default class App extends React.Component {
         return (
         <div className="App">
             <Route exact path='/' component={ HomePage }/>
-            <Route exact path='/hats' component={ HatsPage }/>
-            {/*<HomePage/>*/}
+            <Route exact path='/shop/hats' component={ HatsPage }/>
+            <Switch>
+                <Route path='/shop' component={ Shop }/>
+            </Switch>
         </div>
       );
     }
