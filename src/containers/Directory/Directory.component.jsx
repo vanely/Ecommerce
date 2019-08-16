@@ -51,6 +51,7 @@ export default class Directory extends React.Component {
             <div className="directory-menu">
                 {
                     // destructor within arrow function param within map.
+                    // id, title, imageUrl, size, linkUrl, history, match
                     sections.map(({id,  ...otherSectionProps}) => {
                         return (
                             <MenuItem

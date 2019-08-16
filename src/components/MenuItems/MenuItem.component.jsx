@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 import './MenuItem.styles.scss';
 
-const MenuItem = ({ title, imageUrl, size, linkUrl, history, match}) => {
+const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => {
     console.log(`${match.path}${linkUrl}`);
     return (
         <div className={`${size} menu-item`} onClick={() => history.push(`${match.path}${linkUrl}`)}>
@@ -17,4 +17,6 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match}) => {
     );
 };
 
+// allows us to pass match, location, and history props
+// to the component wrapped in withRouter whenever it renders.
 export default withRouter(MenuItem);
