@@ -1,23 +1,17 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
+import Header from "../../components/Header/Header.component";
 import HomePage from '../../Pages/HomePage/HomePage.component';
 import Shop from '../../Pages/Shop/Shop.component';
 
 import './App.scss';
 
 const HatsPage = (props) => {
+  console.log(props);
   return (
     <div>
       <h1>Hats Page</h1>
-      <button onClick={() => {
-        props.history.push('/')
-      }}>Home Page
-      </button>
-      <button onClick={() => {
-        props.history.push('/shop')
-      }}>Shop
-      </button>
     </div>
   );
 };
@@ -31,6 +25,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Header/>
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/shop/hats' component={HatsPage}/>
