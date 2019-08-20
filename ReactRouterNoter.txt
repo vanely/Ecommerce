@@ -44,4 +44,14 @@ function App() {
 } 
 
 ------------------------------------------------------------------------------------------------------------------------
+* { Link } we can use link to navigate to different routes. The same as if we were to use an <a></a> tag
 
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+const App = () => {
+    return (
+        // link that takes us to '/shop'.
+        <Link to="/shop">Go To Shop</Link>
+    );
+}
+
+------------------------------------------------------------------------------------------------------------------------
