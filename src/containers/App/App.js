@@ -2,6 +2,7 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import Header from "../../components/Header/Header.component";
+import Authentication from "../../Pages/Authentication/Authentication.component";
 import HomePage from '../../Pages/HomePage/HomePage.component';
 import Shop from '../../Pages/Shop/Shop.component';
 
@@ -30,6 +31,7 @@ export default class App extends React.Component {
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/shop/hats' component={HatsPage}/>
           <Route exact path='/shop' component={Shop}/>
+          <Route exact path='/sign-in' component={Authentication}/>
         </Switch>
       </div>
     );
